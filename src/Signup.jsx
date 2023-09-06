@@ -12,7 +12,7 @@ export function Signup() {
       .post("http://localhost:3000/user.json", params)
       .then((response) => {
         console.log(response.data);
-        event.target.result();
+        event.target.reset();
         window.location.href = "/";
       })
       .catch((error) => {
