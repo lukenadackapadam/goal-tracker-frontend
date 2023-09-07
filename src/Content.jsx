@@ -37,6 +37,23 @@ export function Content() {
     setCurrentGoal(goal);
   };
 
+  const handleUpdateGoal = (id, params, successCallback) => {
+    console.log("handleUpdateGoal", params);
+    axios.patch(`http://localhost:3000/goals/${id}.json`, params).then((response) => {
+      setGoals(
+        goals.map((goal) => {
+          if (goal.id === response.data.id) {
+            return response.data;
+          } else {
+            return goal;
+          }
+        })
+      );
+      successCallback();
+      handleClose();
+    });
+  };
+
   const handleClose = () => {
     console.log("handleClose");
     setIsGoalsShowVisible(false);
@@ -50,7 +67,7 @@ export function Content() {
       <GoalsNew onCreateGoal={handleCreateGoal} />
       <GoalsIndex goals={goals} onShowGoal={handleShowGoal} />
       <Modal show={isGoalsShowVisible} onClose={handleClose}>
-        <GoalsShow goal={currentGoal} />
+        <GoalsShow goal={currentGoal} onUpdateGoal={handleUpdateGoal} />
       </Modal>
     </div>
   );
