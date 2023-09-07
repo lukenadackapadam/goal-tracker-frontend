@@ -11,6 +11,9 @@ export function GoalsNew(props) {
       <h1>Create Goal</h1>
       <form onSubmit={handleSubmit}>
         <div>
+          Title: <input name="title" type="text" />
+        </div>
+        <div>
           Description: <textarea name="description" />
         </div>
         <div>
