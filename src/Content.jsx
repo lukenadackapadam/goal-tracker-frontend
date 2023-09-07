@@ -37,6 +37,11 @@ export function Content() {
     setCurrentGoal(goal);
   };
 
+  const handleClose = () => {
+    console.log("handleClose");
+    setIsGoalsShowVisible(false);
+  };
+
   const handleUpdateGoal = (id, params, successCallback) => {
     console.log("handleUpdateGoal", params);
     axios.patch(`http://localhost:3000/goals/${id}.json`, params).then((response) => {
@@ -54,9 +59,12 @@ export function Content() {
     });
   };
 
-  const handleClose = () => {
-    console.log("handleClose");
-    setIsGoalsShowVisible(false);
+  const handleDestroyGoal = (goal) => {
+    console.log("handleDestroyGoal", goal);
+    axios.delete(`http://localhost:3000/goals/${goal.id}.json`).then((response) => {
+      setGoals(goals.filter((g) => g.id !== goal.id));
+      handleClose();
+    });
   };
 
   return (
@@ -67,7 +75,7 @@ export function Content() {
       <GoalsNew onCreateGoal={handleCreateGoal} />
       <GoalsIndex goals={goals} onShowGoal={handleShowGoal} />
       <Modal show={isGoalsShowVisible} onClose={handleClose}>
-        <GoalsShow goal={currentGoal} onUpdateGoal={handleUpdateGoal} />
+        <GoalsShow goal={currentGoal} onUpdateGoal={handleUpdateGoal} onDestroyGoal={handleDestroyGoal} />
       </Modal>
     </div>
   );
