@@ -5,9 +5,13 @@ import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
 import { GoalsNew } from "./GoalsNew";
 import { GoalsIndex } from "./GoalsIndex";
+import { GoalsShow } from "./GoalsShow";
+import { Modal } from "./Modal";
 
 export function Content() {
   const [goals, setGoals] = useState([]);
+  const [isGoalsShowVisible, setIsGoalsShowVisible] = useState(false);
+  const [currentGoal, setCurrentGoal] = useState({});
 
   const handleIndexGoals = () => {
     console.log("handleIndexGoals");
@@ -27,13 +31,27 @@ export function Content() {
     });
   };
 
+  const handleShowGoal = (goal) => {
+    console.log("handleShowGoal", goal);
+    setIsGoalsShowVisible(true);
+    setCurrentGoal(goal);
+  };
+
+  const handleClose = () => {
+    console.log("handleClose");
+    setIsGoalsShowVisible(false);
+  };
+
   return (
     <div>
       <Signup />
       <Login />
       <LogoutLink />
       <GoalsNew onCreateGoal={handleCreateGoal} />
-      <GoalsIndex goals={goals} />
+      <GoalsIndex goals={goals} onShowGoal={handleShowGoal} />
+      <Modal show={isGoalsShowVisible} onClose={handleClose}>
+        <GoalsShow goal={currentGoal} />
+      </Modal>
     </div>
   );
 }
