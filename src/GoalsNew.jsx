@@ -16,17 +16,17 @@ export function GoalsNew(props) {
         <div>
           Goal Type:
           <select name="goal_type" id="goal_type">
-            <option value="daily">Daily</option>
-            <option value="weekly">Weekly</option>
-            <option value="monthly">Monthly</option>
-            <option value="yearly">Yearly</option>
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Yearly">Yearly</option>
           </select>
         </div>
         <div>
           Completion Status:
           <select name="completed" id="completed">
-            <option value="true">True</option>
-            <option value="false">False</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
           </select>
         </div>
         <button type="submit">Create goal!</button>
