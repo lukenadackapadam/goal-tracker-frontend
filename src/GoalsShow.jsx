@@ -6,6 +6,10 @@ export function GoalsShow(props) {
     props.onUpdateGoal(props.goal.id, params, () => event.target.reset());
   };
 
+  const handleClick = () => {
+    props.onDestroyGoal(props.goal);
+  };
+
   return (
     <div>
       <h1>Goal Details</h1>
@@ -38,6 +42,7 @@ export function GoalsShow(props) {
         </div>
         <button type="submit">Update goal!</button>
       </form>
+      <button onClick={handleClick}>Delete Goal</button>
     </div>
   );
 }
