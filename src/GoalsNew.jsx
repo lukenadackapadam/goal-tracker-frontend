@@ -28,8 +28,8 @@ export function GoalsNew(props) {
         <div>
           Completion Status:
           <select name="completed" id="completed">
-            <option value="True">True</option>
-            <option value="False">False</option>
+            <option value="true">True</option>
+            <option value="false">False</option>
           </select>
         </div>
         <button type="submit">Create goal!</button>
