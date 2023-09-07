@@ -1,8 +1,15 @@
-export function GoalsNew() {
+/* eslint-disable react/prop-types */
+
+export function GoalsNew(props) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const params = new FormData(event.target);
+    props.onCreateGoal(params, () => event.target.reset());
+  };
   return (
     <div id="goals-new">
       <h1>Create Goal</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           Description: <textarea name="description" />
         </div>
@@ -17,10 +24,10 @@ export function GoalsNew() {
         </div>
         <div>
           Completion Status:
-          <input type="checkbox" id="true" name="true" />
-          <label>Completed</label>
-          <input type="checkbox" id="false" name="false" />
-          <label>In Progress</label>
+          <select name="completed" id="completed">
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
         </div>
         <button type="submit">Create goal!</button>
       </form>
