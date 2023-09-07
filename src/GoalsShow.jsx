@@ -1,5 +1,11 @@
 /* eslint-disable react/prop-types */
 export function GoalsShow(props) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const params = new FormData(event.target);
+    props.onUpdateGoal(props.goal.id, params, () => event.target.reset());
+  };
+
   return (
     <div>
       <h1>Goal Details</h1>
@@ -7,7 +13,7 @@ export function GoalsShow(props) {
       <p>Description: {props.goal.description}</p>
       <p>Goal Type: {props.goal.goal_type}</p>
       <p>Completed (True or False): {String(props.goal.completed).charAt(0).toUpperCase()}</p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           Title: <input defaultValue={props.goal.title} name="title" type="text" />
         </div>
