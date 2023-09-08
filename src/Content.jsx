@@ -61,6 +61,7 @@ export function Content() {
 
   const handleDestroyGoal = (goal) => {
     console.log("handleDestroyGoal", goal);
+    // eslint-disable-next-line no-unused-vars
     axios.delete(`http://localhost:3000/goals/${goal.id}.json`).then((response) => {
       setGoals(goals.filter((g) => g.id !== goal.id));
       handleClose();
