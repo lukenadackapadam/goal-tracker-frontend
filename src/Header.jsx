@@ -4,7 +4,7 @@ export function Header() {
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar
+            Goal Tracker
           </a>
           <button
             className="navbar-toggler"
@@ -26,7 +26,7 @@ export function Header() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  Link
+                  Signup
                 </a>
               </li>
               <li className="nav-item dropdown">
