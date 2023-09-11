@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Homepage } from "./Homepage";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
@@ -72,10 +73,11 @@ export function Content() {
   return (
     <div>
       <Routes>
+        <Route path="/" element={<Homepage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/new_goal" element={<GoalsNew onCreateGoal={handleCreateGoal} />} />
-        <Route path="/" element={<GoalsIndex goals={goals} onShowGoal={handleShowGoal} />} />
+        <Route path="/goals" element={<GoalsIndex goals={goals} onShowGoal={handleShowGoal} />} />
         {/* <LogoutLink /> */}
       </Routes>
       <Modal show={isGoalsShowVisible} onClose={handleClose}>

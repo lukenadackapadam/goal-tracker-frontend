@@ -3,5 +3,23 @@ html {
 }
 
 #footer {
-  text-align: right;
+  position: relative;
+} 
+
+#copyright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
+
+/* :root {
+  -bs-body-font-family: 'Roboto'
+} */
+/* #homepage {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: turquoise;
+} */
+
+/* .nav-item {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */

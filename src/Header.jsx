@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
-  const [isSignupVisible, setSignupVisible] = useState(false);
+  const [isSignupVisible, setIsSignupVisible] = useState(false);
 
   let authenticationLinks;
   if (localStorage.jwt === undefined) {
@@ -26,6 +26,11 @@ export function Header() {
   } else {
     authenticationLinks = (
       <>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page">
+            <Link to="/goals">Goal</Link>
+          </a>
+        </li>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page">
             <Link to="/new_goal">New Goal</Link>
