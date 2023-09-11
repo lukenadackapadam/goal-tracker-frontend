@@ -5,11 +5,12 @@ export function GoalsIndex(props) {
       <h1>All Goals</h1>
       {props.goals.map((goal) => (
         <div key={goal.id}>
-          <h2>{goal.title}</h2>
-          {/* <p>Description: {goal.description}</p>
-          <p>Type of Goal: {goal.goal_type}</p>
-          <p>Completed (True or False): {String(goal.completed).charAt(0).toUpperCase()}</p> */}
-          <button onClick={() => props.onShowGoal(goal)}>More Info</button>
+          <div className="card">
+            <div className="card-body">
+              <h2 className="card-title">{goal.title}</h2>
+              <button onClick={() => props.onShowGoal(goal)}>More Info</button>
+            </div>
+          </div>
         </div>
       ))}
     </div>
