@@ -28,7 +28,7 @@ export function Header() {
       <>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page">
-            <Link to="/goals">Goal</Link>
+            <Link to="/goals">Goals</Link>
           </a>
         </li>
         <li className="nav-item">
@@ -58,7 +58,7 @@ export function Header() {
       <Modal show={isSignupVisible} onClose={handleSignupClose}>
         <Signup />
       </Modal>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav id="nav" className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <button
             className="navbar-toggler"

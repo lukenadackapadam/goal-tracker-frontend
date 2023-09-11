@@ -24,6 +24,7 @@ export function Signup() {
   return (
     <div id="signup">
       <h1>Signup</h1>
+      <hr />
       <ul>
         {errors.map((error) => (
           <li key={error}>{error}</li>
@@ -31,19 +32,19 @@ export function Signup() {
       </ul>
       <form onSubmit={handleSubmit}>
         <div>
-          First Name: <input name="first_name" type="text" />
+          First Name: <input className="form-control" name="first_name" type="text" />
         </div>
         <div>
-          Last Name: <input name="last_name" type="text" />
+          Last Name: <input className="form-control" name="last_name" type="text" />
         </div>
         <div>
-          Email: <input name="email" type="email" />
+          Email: <input className="form-control" name="email" type="email" />
         </div>
         <div>
-          Password: <input name="password" type="password" />
+          Password: <input className="form-control" name="password" type="password" />
         </div>
         <div>
-          Confirm Password: <input name="password_confirmation" type="password" />
+          Confirm Password: <input className="form-control" name="password_confirmation" type="password" />
         </div>
         <button type="submit">Submit!</button>
       </form>

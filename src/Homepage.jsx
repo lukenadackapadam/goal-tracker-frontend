@@ -1,11 +1,11 @@
 export function Homepage() {
   return (
-    <div className="container text-center" id="homepage">
-      <div className="row">
-        <div className="col">
-          <h1 className="display-1">Goal Tracking</h1>
-        </div>
-      </div>
+    <div id="homepage">
+      <h1 className="display-1">Goal Tracking</h1>
+      <hr />
+      <br />
+      <p>A simple goal tracking application to aid you in achieving any goal.</p>
+      <p>Signup or Login to get started.</p>
     </div>
   );
 }

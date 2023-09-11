@@ -9,16 +9,17 @@ export function GoalsNew(props) {
   return (
     <div id="goals-new">
       <h1>Create Goal</h1>
+      <hr />
       <form onSubmit={handleSubmit}>
         <div>
-          Title: <input name="title" type="text" />
+          Title: <input className="form-control" name="title" type="text" />
         </div>
         <div>
-          Description: <textarea name="description" />
+          Description: <textarea className="form-control" name="description" />
         </div>
         <div>
           Goal Type:
-          <select name="goal_type" id="goal_type">
+          <select className="form-control" name="goal_type" id="goal_type">
             <option value="Daily">Daily</option>
             <option value="Weekly">Weekly</option>
             <option value="Monthly">Monthly</option>
@@ -27,11 +28,12 @@ export function GoalsNew(props) {
         </div>
         <div>
           Completion Status:
-          <select name="completed" id="completed">
+          <select className="form-control" name="completed" id="completed">
             <option value="true">True</option>
             <option value="false">False</option>
           </select>
         </div>
+        <br />
         <button type="submit">Create goal!</button>
       </form>
     </div>

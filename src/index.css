@@ -1,5 +1,27 @@
 html {
   scroll-behavior: smooth;
+  background-color: #DBE2EF;
+}
+
+#homepage {
+  text-align: center;
+  background-color: #DBE2EF;
+}
+
+#signup {
+  background-color: #DBE2EF;
+}
+
+#login {
+  background-color: #DBE2EF;
+}
+
+#index {
+  background-color: #DBE2EF;
+}
+
+#goals-new {
+  background-color: #DBE2EF;
 }
 
 #footer {
