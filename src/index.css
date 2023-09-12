@@ -27,25 +27,26 @@ html {
 #footer {
   position: fixed;
   left: 50%;
-  bottom: 20px;
+  bottom: -40px;
   transform: translate(-50%, -50%);
   margin: 0 auto;
 } 
+
+#copyright {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* .aws-button {
+  margin-left: 10px;
+} */
+
+/* #AwesomeButtonSocial {
+  margin-left: 10px;
+} */
 
 /* #copyright {
   position: absolute;
   bottom: 0;
   right: 0;
-} */
-
-/* :root {
-  -bs-body-font-family: 'Roboto'
-} */
-/* #homepage {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: turquoise;
-} */
-
-/* .nav-item {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } */
