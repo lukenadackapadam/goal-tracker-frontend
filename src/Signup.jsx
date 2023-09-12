@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
+import { AwesomeButton } from "react-awesome-button";
+import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
 export function Signup() {
   const [errors, setErrors] = useState([]);
@@ -13,7 +15,7 @@ export function Signup() {
       .then((response) => {
         console.log(response.data);
         event.target.reset();
-        window.location.href = "/";
+        window.location.href = "/login";
       })
       .catch((error) => {
         console.log(error.response.data.errors);
@@ -46,7 +48,9 @@ export function Signup() {
         <div>
           Confirm Password: <input className="form-control" name="password_confirmation" type="password" required />
         </div>
-        <button type="submit">Submit!</button>
+        <AwesomeButton cssModule={AwesomeButtonStyles} type="primary">
+          Submit!
+        </AwesomeButton>
       </form>
     </div>
   );
