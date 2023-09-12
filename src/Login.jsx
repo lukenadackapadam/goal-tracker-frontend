@@ -39,10 +39,10 @@ export function Login() {
       </ul>
       <form onSubmit={handleSubmit}>
         <div>
-          Email: <input className="form-control" name="email" type="email" />
+          Email: <input className="form-control" name="email" type="email" required />
         </div>
         <div>
-          Password: <input className="form-control" name="password" type="password" />
+          Password: <input className="form-control" name="password" type="password" required />
         </div>
         <button type="submit">Login</button>
       </form>

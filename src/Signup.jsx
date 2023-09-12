@@ -32,19 +32,19 @@ export function Signup() {
       </ul>
       <form onSubmit={handleSubmit}>
         <div>
-          First Name: <input className="form-control" name="first_name" type="text" />
+          First Name: <input className="form-control" name="first_name" type="text" required />
         </div>
         <div>
-          Last Name: <input className="form-control" name="last_name" type="text" />
+          Last Name: <input className="form-control" name="last_name" type="text" required />
         </div>
         <div>
-          Email: <input className="form-control" name="email" type="email" />
+          Email: <input className="form-control" name="email" type="email" required />
         </div>
         <div>
-          Password: <input className="form-control" name="password" type="password" />
+          Password: <input className="form-control" name="password" type="password" required />
         </div>
         <div>
-          Confirm Password: <input className="form-control" name="password_confirmation" type="password" />
+          Confirm Password: <input className="form-control" name="password_confirmation" type="password" required />
         </div>
         <button type="submit">Submit!</button>
       </form>

@@ -12,10 +12,10 @@ export function GoalsNew(props) {
       <hr />
       <form onSubmit={handleSubmit}>
         <div>
-          Title: <input className="form-control" name="title" type="text" />
+          Title: <input className="form-control" name="title" type="text" required />
         </div>
         <div>
-          Description: <textarea className="form-control" name="description" />
+          Description: <textarea className="form-control" name="description" required />
         </div>
         <div>
           Goal Type:

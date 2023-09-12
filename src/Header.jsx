@@ -45,6 +45,7 @@ export function Header() {
     );
   }
 
+  // eslint-disable-next-line no-unused-vars
   const handleSignupShow = () => {
     setIsSignupVisible(true);
   };
