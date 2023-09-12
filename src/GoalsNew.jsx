@@ -5,6 +5,7 @@ export function GoalsNew(props) {
     event.preventDefault();
     const params = new FormData(event.target);
     props.onCreateGoal(params, () => event.target.reset());
+    window.location.href = "/goals";
   };
   return (
     <div id="goals-new">
