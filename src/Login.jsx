@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
+import { AwesomeButton } from "react-awesome-button";
+import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
 const jwt = localStorage.getItem("jwt");
 if (jwt) {
@@ -44,7 +46,9 @@ export function Login() {
         <div>
           Password: <input className="form-control" name="password" type="password" required />
         </div>
-        <button type="submit">Login</button>
+        <AwesomeButton cssModule={AwesomeButtonStyles} type="primary">
+          Login
+        </AwesomeButton>
       </form>
     </div>
   );

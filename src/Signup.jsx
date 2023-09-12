@@ -49,7 +49,7 @@ export function Signup() {
           Confirm Password: <input className="form-control" name="password_confirmation" type="password" required />
         </div>
         <AwesomeButton cssModule={AwesomeButtonStyles} type="primary">
-          Submit!
+          Submit
         </AwesomeButton>
       </form>
     </div>

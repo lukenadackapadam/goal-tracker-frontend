@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { AwesomeButton } from "react-awesome-button";
+import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
 export function GoalsIndex(props) {
   const [searchFilter, setSearchFilter] = useState("");
@@ -24,7 +26,10 @@ export function GoalsIndex(props) {
             <div className="card">
               <div className="card-body">
                 <h2 className="card-title">{goal.title}</h2>
-                <button onClick={() => props.onShowGoal(goal)}>More Info</button>
+                <AwesomeButton cssModule={AwesomeButtonStyles} type="secondary" onPress={() => props.onShowGoal(goal)}>
+                  More Info
+                </AwesomeButton>
+                {/* <button onClick={() => props.onShowGoal(goal)}>More Info</button> */}
               </div>
             </div>
           </div>

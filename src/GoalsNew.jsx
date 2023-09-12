@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { AwesomeButton } from "react-awesome-button";
+import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
 
 export function GoalsNew(props) {
   const handleSubmit = (event) => {
@@ -35,7 +37,10 @@ export function GoalsNew(props) {
           </select>
         </div>
         <br />
-        <button type="submit">Create goal!</button>
+        <AwesomeButton cssModule={AwesomeButtonStyles} type="primary">
+          Create Goal
+        </AwesomeButton>
+        {/* <button type="submit">Create goal!</button> */}
       </form>
     </div>
   );

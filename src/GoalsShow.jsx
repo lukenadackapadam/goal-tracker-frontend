@@ -1,4 +1,7 @@
 /* eslint-disable react/prop-types */
+import { AwesomeButton } from "react-awesome-button";
+import AwesomeButtonStyles from "react-awesome-button/src/styles/styles.scss";
+
 export function GoalsShow(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -42,9 +45,15 @@ export function GoalsShow(props) {
           </select>
         </div>
         <br />
-        <button type="submit">Update goal!</button>
+        <AwesomeButton cssModule={AwesomeButtonStyles} type="primary">
+          Update goal
+        </AwesomeButton>
+        {/* <button type="submit">Update goal!</button> */}
       </form>
-      <button onClick={handleClick}>Delete Goal</button>
+      <AwesomeButton onPress={handleClick} cssModule={AwesomeButtonStyles} type="danger">
+        Delete Goal
+      </AwesomeButton>
+      {/* <button onClick={handleClick}>Delete Goal</button> */}
     </div>
   );
 }
