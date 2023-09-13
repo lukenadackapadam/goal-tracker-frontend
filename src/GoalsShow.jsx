@@ -7,6 +7,7 @@ export function GoalsShow(props) {
     event.preventDefault();
     const params = new FormData(event.target);
     props.onUpdateGoal(props.goal.id, params, () => event.target.reset());
+    window.location.href = "/goals";
   };
 
   const handleClick = () => {
